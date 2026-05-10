@@ -7,22 +7,24 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "pages:build": "npx @cloudflare/next-on-pages",
+    "deploy": "npm run pages:build"
   },
   "dependencies": {
-    "next": "14.2.3",
+    "@tanstack/react-query": "^5.36.1",
+    "gsap": "^3.12.5",
+    "next": "^16.2.6",
     "react": "^18",
     "react-dom": "^18",
-    "gsap": "^3.12.5",
-    "zustand": "^4.5.2",
-    "@tanstack/react-query": "^5.36.1"
+    "zustand": "^4.5.2"
   },
   "devDependencies": {
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
-    "typescript": "^5",
     "eslint": "^8",
-    "eslint-config-next": "14.2.3"
+    "eslint-config-next": "14.2.3",
+    "typescript": "^5"
   }
 }
