@@ -1,0 +1,63 @@
+.feed {
+  position: absolute;
+  /* TODO: position this alongside the menu panel once layout is finalised */
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 48px;
+  background: #0d0d0d;
+  overflow-y: auto;
+  z-index: 5;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.card {
+  background: #111111;
+  border: 0.5px solid #2a1010;
+  border-radius: 6px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: border-color 0.2s;
+}
+
+.card:hover {
+  border-color: #cc2222;
+}
+
+.cardImage {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  display: block;
+}
+
+.cardCaption {
+  font-size: 13px;
+  color: #cccccc;
+  font-family: Georgia, serif;
+  padding: 10px 12px;
+  line-height: 1.5;
+}
+
+.cardType {
+  display: inline-block;
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #666666;
+  padding: 0 12px 10px;
+}
+
+.status {
+  font-size: 14px;
+  color: #666666;
+  font-family: Georgia, serif;
+  text-align: center;
+  margin-top: 48px;
+}

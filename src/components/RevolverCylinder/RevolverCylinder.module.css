@@ -1,0 +1,46 @@
+.wrap {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transition:
+    left 0.85s cubic-bezier(0.77, 0, 0.18, 1),
+    transform 0.85s cubic-bezier(0.77, 0, 0.18, 1);
+  z-index: 1;
+}
+
+.fired {
+  left: 16%;
+  transform: translate(-50%, -50%);
+}
+
+/* Canvas cursor is set imperatively in the hook via canvas.style.cursor */
+
+.tooltip {
+  position: absolute;
+  background: #0d0d0d;
+  color: #f0f0f0;
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-family: Georgia, serif;
+  padding: 6px 12px;
+  border-radius: 3px;
+  pointer-events: none;
+  white-space: nowrap;
+  transform: translate(-50%, -100%);
+  margin-top: -10px;
+  z-index: 20;
+  border: 0.5px solid #3a1111;
+}
+
+.tooltip::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 5px solid transparent;
+  border-bottom: none;
+  border-top-color: #0d0d0d;
+}
