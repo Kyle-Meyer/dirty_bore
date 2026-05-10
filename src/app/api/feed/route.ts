@@ -15,6 +15,7 @@ import type { FeedResponse } from '@/types';
  * should write new posts here so the feed picks them up on
  * the next poll cycle.
  */
+export const runtime = 'edge';
 export async function GET(): Promise<NextResponse<FeedResponse>> {
   const placeholder: FeedResponse = {
     posts: [

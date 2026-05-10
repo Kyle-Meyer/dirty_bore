@@ -11,7 +11,7 @@ import { NextRequest, NextResponse } from 'next/server';
  *
  * Docs: https://developers.facebook.com/docs/graph-api/webhooks/
  */
-
+export const runtime = 'edge';
 const VERIFY_TOKEN = process.env.INSTAGRAM_VERIFY_TOKEN ?? 'replace-me';
 
 // ── Verification handshake (GET) ─────────────────────────────
